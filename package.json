@@ -1,0 +1,23 @@
+{
+  "name": "pdf-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HtmlParser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlgssonBraga/excel-converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlgssonBraga/excel-converter/issues"
+  },
+  "homepage": "https://github.com/IlgssonBraga/excel-converter#readme",
+  "dependencies": {
+    "ejs": "^3.1.3"
+  }
+}
