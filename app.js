@@ -3,6 +3,7 @@ const Processor = require("./Processor");
 const Table = require("./Table");
 const HtmlParser = require("./HtmlParser");
 const Writer = require("./Writer");
+const PdfWriter = require("./PdfWriter");
 
 const leitor = new Reader();
 const escritor = new Writer();
@@ -17,6 +18,8 @@ async function main() {
   console.log(html);
 
   escritor.writer(`${Date.now()}.html`, html);
+
+  PdfWriter.WritePdf(`${Date.now()}.pdf`, html);
 }
 
 main();
