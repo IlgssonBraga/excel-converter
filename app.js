@@ -2,8 +2,10 @@ const Reader = require("./Reader");
 const Processor = require("./Processor");
 const Table = require("./Table");
 const HtmlParser = require("./HtmlParser");
+const Writer = require("./Writer");
 
 const leitor = new Reader();
+const escritor = new Writer();
 
 async function main() {
   const dados = await leitor.read("./users.csv");
@@ -12,8 +14,9 @@ async function main() {
   console.log(table.RowCount);
   console.log(table.ColumnCount);
   const html = await HtmlParser.Parse(table);
-
   console.log(html);
+
+  escritor.writer(`${Date.now()}.html`, html);
 }
 
 main();
