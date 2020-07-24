@@ -8,7 +8,8 @@ async function main() {
   const dados = await leitor.read("./users.csv");
   const dataProcess = Processor.Process(dados);
   const table = new Table(dataProcess);
-  console.log(table);
+  console.log(table.RowCount);
+  console.log(table.ColumnCount);
 }
 
 main();
